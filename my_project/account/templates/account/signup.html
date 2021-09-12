@@ -1,0 +1,71 @@
+{% extends 'account/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<body id="wrapper">
+
+    {% block body %}
+
+    <section id="login-reg">
+        <div class="container">
+            <!-- Top content -->
+            <div class="row">
+                <div class="¥forms-right-icons">
+                    <div class="section-heading">
+                        <h2>Sig Up With <span>Us</span></h2>
+                    </div>
+                </div>
+                <!--forms-right-icons-->
+                <div class="col-md-6" style="margin-left: 25%;">
+                    <div class="form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Sign up now</h3>
+                                <p>Fill in the form below to get instant access</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-pencil"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form method='POST' role="form" action="" class="login-form">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <button type="submit" class="btn">Sign me up!</button>
+                            </form>
+                            <style>
+                                #hint_id_username,
+                                #hint_id_password1 {
+                                    display: none;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    
+    <div id="panel">
+        <div id="panel-admin">
+            <div class="panel-admin-box">
+                <div id="tootlbar_colors">
+                    <button class="color" style="background-color:#1abac8;"
+                        onclick="mytheme(0)"></button>
+                    <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)">
+                    </button>
+                    <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)">
+                    </button>
+                    <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)">
+                    </button>
+                    <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)">
+                    </button>
+                    <button class="color" style="background-color:#159eee;" onclick="mytheme(5)">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
+    </div>
+
+    {% endblock body %}
+
+</body>

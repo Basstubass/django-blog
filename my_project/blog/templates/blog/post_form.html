@@ -1,0 +1,26 @@
+{% extends 'account/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+<div class="col-md-6 col-sm-12" style="margin-left: 20%;">
+    <div class="form-box">
+        <div class="form-top">
+            <div class="form-top-left">
+                <h3>New Post</h3>
+                <p>Fill in the form below to get instant access</p>
+            </div>
+            <div class="form-top-right">
+                <i class="fa fa-pencil"></i>
+            </div>
+        </div>
+        <div class="form-bottom">
+            <form method='POST' role="form" action="" class="login-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary">Post Now!</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

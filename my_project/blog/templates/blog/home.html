@@ -1,0 +1,220 @@
+{% extends 'account/base.html' %}
+{% load static %}
+
+
+<body id="wrapper">
+
+    {% block body %}
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('static/img/banner-slide-1.jpeg');">
+                </div>
+                <div class="row">
+                    <div class="carousel-caption slide-up">
+                        <h1 class="banner_heading">WELLCOME TO <br><span> TSUBASU </span> Official</h1>
+                        <p class="banner_txt">つばすブログサイト開設</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="fill" style="background-image:url('static/img/banner-slide-3.jpeg');">
+                </div>
+                <div class="carousel-caption slide-up">
+                    <h1 class="banner_heading">This is <br><span> TSUBASU BLOG </span> SITE </h1>
+                    <p class="banner_txt">This is the site to bring you the latest information on Tsubasu.</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="fill" style="background-image:url('static/img/banner-slide-2.jpeg');">
+                </div>
+                <div class="carousel-caption slide-up">
+                    <h1 class="banner_heading">There is <br>
+                        <span> always light behind </span>
+                        <br> the clouds.</h1>
+                    <p class="banner_txt"> We are all full of hope. Do not extinguish that light. Let's stand up now. </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <i
+                class="fas fa-angle-double-left soild¥¥" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <i
+                class="fas fa-angle-double-right " aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <section id="features"  style="background-color: rgba(117, 118, 119, 0.8);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12 block" style="margin-bottom: 10px;">
+                    <div class="text-center" style="margin-bottom: 10px;"><i class="fab fa-python feature_icon"></i></div>
+                    <div class="col-md-10 col-xs-10 text-center">
+                        <h4 style="color: white;">Django</h4>
+                        <p style="color: white;">Django is a python framework. With this tool, you can easily create blogs, 
+                            user authentication functions, and more. This site also uses django.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 block" style="margin-bottom: 10px;">
+                    <div class="text-center" style="margin-bottom: 10px;"><i class="fas fa-file-code feature_icon"></i></div>
+                    <br>
+                    <div class="col-md-10 col-xs-10 text-center">
+                        <h4 style="color: white;">HTML＆CSS,JS</h4>
+                        <p style="color: white;">By using bootstraps and jQuery based on HTNL & CSS, JS, we were able to realize an advanced front-end. 
+                            In addition, by using libraries for icons, etc., we made it easy for users to understand.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 block" style="margin-bottom: 10px;">
+                    <div class="text-center" style="margin-bottom: 10px;"><i class="fas fa-kiwi-bird feature_icon"></i></div>
+                    <div class="col-md-10 col-xs-10 text-center">
+                        <h4 style="color: white;">Ducking</h4>
+                        <p style="color: white;">With Duck's help, we were able to overcome many difficulties. 
+                            I feel that this has been a great experience in my life. This is because of Duck and Dr. 
+                            David. I am very grateful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="col-lg-4 col-md-9 col-sm-5 col-xs-5">
+            <div class="background-imgholder">
+                <img src="static/img/bit-duck.jpg" class="img-responsive" style="border-radius: 10px; margin-left: 30px;">
+            </div>
+        </div>
+
+        <div class="container-fluid"style="background-color: rgba(117, 118, 119, 0.8);">
+        <div class="col-md-8 col-md-offset-4 text-inner">
+                <div class="text-block">
+                    <div class="section-heading">
+                        <form action="{% url 'post-create' %}">
+                            <button type="submit" class="btn btn-primary"> New Post<i
+                                                  class="fa fa-caret-right"></i> </button>
+                        </form>
+                        <p>投稿するにはログインが必要です。</p>
+                        {% for post in posts %}
+                        <h1  style="font-family: serif;"><a href ="{% url 'post-detail' post.id %}">{{ post.title }}</a> 
+                        <small style="font-size: 20px;"> written by:
+                            </small><span>{{ post.author }}</span></h1>
+                        <p class="subheading">{{ post.date_posted|date:'Y-m-d P' }}</p>
+
+                        <ul class="aboutul">
+                            <li> <i class="fa fa-check"></i>{{ post.content }}</li>
+                        </ul>
+                        <hr>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="process">
+        <class class="container">
+            <div class="section-heading text-center">
+                <div class="col-md-12 col-xs-12">
+                    <h1>The Society<span> We Want</span></h1>
+                    <p class="subheading">You can’t connect the dots looking forward; 
+                        you can only connect them looking backwards. 
+                        <br>So you have to trust 
+                        that the dots will somehow connect 
+                        in your future.</p>
+                </div>
+            </div>
+            </class>
+            <section id="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12 block">
+                            <div class="text-center" style="margin-bottom: 10px;"><i class="fab fa-instagram-square feature_icon"></i></div>
+                            <div class="col-md-10 col-xs-10 text-center">
+                                <h4>instagram</h4>
+                                </div>
+                            </div>
+                        <div class="col-md-3 col-xs-12 block">
+                            <div class="text-center" style="margin-bottom: 10px;"><i class="fab fa-twitter-square feature_icon"></i></div>
+                            <br>
+                            <div class="col-md-10 col-xs-10 text-center">
+                                <h4>Twitter</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 block">
+                            <div class="text-center" style="margin-bottom: 10px;"><i class="fab fa-github-square feature_icon"></i></div>
+                            <div class="col-md-10 col-xs-10 text-center">
+                                <h4>Github</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 block">
+                            <div class="text-center" style="margin-bottom: 10px;"><i class="fab fa-pinterest-square feature_icon"></i></div>
+                            <div class="col-md-10 col-xs-10 text-center">
+                                <h4>Pinterest</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    
+
+    <section id="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+                    <a href="#">This is CS50</a>
+                    <br>
+                    <a href="#">final_project</a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+                    Developed by <a href="#">つばす_WEB制作チーム</a>
+                    <br>
+                    Designed by <a href="#">つばす_WEB制作チーム</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="panel">
+        <div id="panel-admin">
+            <div class="panel-admin-box">
+                <div id="tootlbar_colors">
+                    <button class="color" style="background-color:#1abac8;"
+                        onclick="mytheme(0)"></button>
+                    <button class="color" style="background-color:#ff8a00;" onclick="mytheme(1)">
+                    </button>
+                    <button class="color" style="background-color:#b4de50;" onclick="mytheme(2)">
+                    </button>
+                    <button class="color" style="background-color:#e54e53;" onclick="mytheme(3)">
+                    </button>
+                    <button class="color" style="background-color:#1abc9c;" onclick="mytheme(4)">
+                    </button>
+                    <button class="color" style="background-color:#159eee;" onclick="mytheme(5)">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
+    </div>
+
+    {% endblock body %}
+
+</body>

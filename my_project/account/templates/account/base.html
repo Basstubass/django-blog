@@ -1,0 +1,167 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        name="viewport">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/skin.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d1f067d451.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src={% static "js/index.js" %}></script>
+</head>
+
+<body id="wrapper">
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header ">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'blog-home' %}">
+                            <h1 class="header-title"style>Tsubasu</h1>
+                        </a>
+                    </div>
+
+                    <div id="navbar" class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{% url 'blog-home' %}">Home</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+                            {% else %}
+                            <li><a href="{% url 'login' %}">Log In</a></li>
+                            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/.nav-ends -->
+
+    {% block body %}
+
+    <section id="about">
+        <div class="image-holder col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
+            <div class="background-imgholder">
+                <img src="static/img/duck.jpeg" al' %}t=" about" class="img-responsive"
+                    style="display:none;" />
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="col-md-7 col-md-offset-5 col-sm-8 col-sm-offset-2 col-xs-12 text-inner ">
+                <div class="text-block">
+                    <div class="section-heading">
+
+                        {% for post in posts %}
+                        <h1>{{ post.title }} <small>written by:
+                            </small><span>{{ post.author }}</span></h1>
+                        <p class="subheading">{{ post.date_posted|date:'Y-m-d P' }}</p>
+
+                        <ul class="aboutul">
+                            <li> <i class="fa fa-check"></i>{{ post.content }}</li>
+                        </ul>
+                        <hr>
+                        {% endfor %}
+
+                    </div>
+                    <button type="button" class="btn btn-primary slide">Learn More <i
+                            class="fa fa-caret-right"></i> </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonial">
+        <div class="container">
+            <div class="section-heading text-center">
+                <div class="col-md-12 col-xs-12">
+                    <h1>The Society<span> We Want</span></h1>
+                    <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae
+                        instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor
+                        oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne
+                        mei.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12 block ">
+                    <div class="testimonial_box">
+                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix
+                            denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea
+                            utamur impetus fuisset. </p>
+                    </div>
+
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user"
+                                class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Lorem Ipsum</h5>
+                            <p>Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4 col-sm-12 block">
+                    <div class="testimonial_box">
+                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix
+                            denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea
+                            utamur impetus fuisset. </p>
+                    </div>
+
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user"
+                                class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Lorem Ipsum</h5>
+                            <p>Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12 block">
+                    <div class="testimonial_box">
+                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix
+                            denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea
+                            utamur impetus fuisset. </p>
+                    </div>
+
+                    <div class="arrow-down"></div>
+                    <div class="testimonial_user">
+                        <div class="user-image"><img src="{% static 'img/user1.png' %}" alt="user"
+                                class="img-responsive" /></div>
+                        <div class="user-info">
+                            <h5>Lorem Ipsum</h5>
+                            <p>Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock body %}
+</body>
+
+</html>
