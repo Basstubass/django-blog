@@ -107,10 +107,11 @@
                             <button type="submit" class="btn btn-primary"> New Post<i
                                                   class="fa fa-caret-right"></i> </button>
                         </form>
+                        
                         <p>投稿するにはログインが必要です。</p>
                         {% for post in posts %}
-                        <h1  style="font-family: serif;"><a href ="{% url 'post-detail' post.id %}">{{ post.title }}</a> 
-                        <small style="font-size: 20px;"> written by:
+                        <h1  style="font-family: 'Caveat', cursive;"><a href ="{% url 'post-detail' post.id %}">{{ post.title }}</a> 
+                        <small style="font-size: 20px; font-family: serif;"> written by:
                             </small><span>{{ post.author }}</span></h1>
                         <p class="subheading">{{ post.date_posted|date:'Y-m-d P' }}</p>
 
