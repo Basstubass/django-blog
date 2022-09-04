@@ -1,0 +1,33 @@
+.book_main{
+  font-size: 18px;
+  font-family:Arial;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-bottom: 5%;
+}
+.book_main li{
+  margin-top: 3%;
+}
+
+.Commentary{
+  background-color: aliceblue;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+
+.Commentary h1{
+  text-align: center;
+  padding-top: 3%;
+}
+
+.bool_title{
+  font-size:12px;
+}
+
+.footer{
+  margin-top: 5%;
+}
+.footer p{
+  text-align: center;
+}

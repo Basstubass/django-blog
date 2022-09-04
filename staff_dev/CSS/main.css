@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+body{
+    margin: 0;
+    background-color: #6A7788;
+}
+/* hr{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 21%;
+    border-top: 4px solid ;
+} */
+
+.header{
+    height: 150px;
+    background: -moz-linear-gradient(top, #FFF, black);
+    background: -webkit-linear-gradient(top,  rgb(104, 103, 103), black);
+    background: linear-gradient(to bottom,  rgb(79, 79, 79), black);
+    /* position: relative; */
+}
+.header h1{
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 40px;
+    font-family: 'Merriweather', serif;
+}
+.header-menu{
+    text-align: center;
+    padding-top: 2%;
+}
+.header-menu ul{
+    margin: 0;
+    padding: 0;
+}
+.header-menu ul li{
+    font-family: 'Merriweather', serif;
+    list-style: none;
+    color: white;
+    display: inline;
+    padding-left: 3%;
+    font-size: 18px;
+}
+.header-menu ul li a{
+    text-decoration: none;
+    color : inherit;
+
+}
+.header-menu ul li a:hover {
+    color: rgb(158, 158, 158);
+  }
+
+
+/* //////////////////////////////////// */
+.main{
+    text-align: center;
+}
+#my_brock{
+    position: relative;
+    display: inline-block;
+    /* margin-left: 3%; */
+}
+.my_photo{
+    width: 253px;
+    height: 334px;
+    background-color: antiquewhite;
+    margin-top: 8%;
+}
+.profile{
+    background-color: rgb(187, 187, 187);
+    height: 334px;
+    width: 750px;
+    margin-top: 8%;
+    margin-left: 3%;
+}
+.profile_area{
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 12%;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #828282;
+    width: 90%;
+}
+.profile_area p{
+    position: absolute;
+    font-size: 18px;
+    margin: 7px 0px 0px 12%;
+}
+.profile h1{
+    position: absolute;
+    font-size: 25px;
+    margin:0;
+}
+.name_profile{
+   position: absolute;
+}
+.profile_area img{
+    margin-top: 11px;
+    margin-left: 25%;
+}
+.profile_affiliation ul{
+    list-style: none;
+    position: absolute;
+    margin: 0;
+}
+.affiliation li{
+    text-align: left;
+}
+.profile_address ul{
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    top: 55%;
+}
+.address li{
+    text-align: left;
+}
+.updata_days{
+    position: absolute;
+    margin:0;
+    top: 90%;
+    left: 70%;
+}
+
+.whats_pick{
+    width: 1050px;
+    height: 700px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 2%;
+}
+
+input[type="submit"]{
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+  }
+  input[type="submit"]{
+    position: relative;
+    display: block;
+    padding: 10px;
+    width: 110px;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    background: #000000;
+    border-radius: 5px;
+  }
+
+  .whats_news{
+      position: absolute;
+      top: 10%;
+      left: 5%;
+  }
+  .News_area{
+    height: 550px;
+    width: 450px;
+    margin-top: 3%;
+    border: solid;
+    border-color: #0000007b;
+  }
+  .News_box{
+      margin-top: 5%;
+      margin-left: 6%;
+  }
+  .News_box p{
+    text-align: left;
+    margin: 0;
+  }
+  .topics{
+    position: absolute;
+    top: 10%;
+    left: 52%;
+  }
+  .Topic_area{
+    height: 550px;
+    width: 450px;
+    margin-top: 3%;
+    border: solid;
+    border-color: #0000007b;
+  }
+  .topics_box{
+    margin-top: 5%;
+    margin-left: 6%;
+  }
+  .topics_box p{
+    text-align: left;
+    margin: 0;
+  }
+  .footer{
+      margin-top: 5%;
+  }
+  .footer p{
+      text-align: center;
+  }

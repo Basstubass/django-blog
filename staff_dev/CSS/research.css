@@ -1,0 +1,22 @@
+.investigation_title{
+    margin-left: 10%;
+    margin-top: 4%;
+}
+.investigation{
+    position: relative;
+    margin-top: 4%;
+    margin-left: 13%;
+    width: 80%;
+    display: inline-block;
+}
+.investigation_aria{
+    width: 60%;
+    margin-left: 10%;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+
+/* .investigation:nth-of-type(odd){
+    top: 70%;
+} */

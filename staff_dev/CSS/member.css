@@ -1,0 +1,74 @@
+.main{
+    text-align: center;
+}
+#my_brock{
+    position: relative;
+    display: inline-block;
+    /* margin-left: 3%; */
+}
+.my_photo{
+    width: 253px;
+    height: 334px;
+    background-color: antiquewhite;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.profile{
+    background-color: rgb(187, 187, 187);
+    height: 334px;
+    width: 750px;
+    margin-top: 8%;
+    margin-left: 3%;
+}
+.profile_area{
+    margin-top: 5%;
+    margin-left: 5%;
+    height: 12%;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #828282;
+    width: 90%;
+}
+.profile_area p{
+    position: absolute;
+    font-size: 18px;
+    margin: 7px 0px 0px 12%;
+}
+.profile h1{
+    position: absolute;
+    font-size: 25px;
+    margin:0;
+}
+.name_profile{
+   position: absolute;
+}
+.profile_area img{
+    margin-top: 11px;
+    margin-left: 25%;
+}
+.profile_affiliation ul{
+    list-style: none;
+    position: absolute;
+    margin: 0;
+}
+.affiliation li{
+    text-align: left;
+}
+.profile_address ul{
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    top: 55%;
+}
+.address li{
+    text-align: left;
+}
+.updata_days{
+    position: absolute;
+    margin:0;
+    top: 90%;
+    left: 70%;
+}
