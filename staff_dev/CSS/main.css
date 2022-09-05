@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap') */
 
 
 body{
@@ -26,7 +26,7 @@ body{
     text-align: center;
     padding-top: 2%;
     font-size: 40px;
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
 }
 .header-menu{
     text-align: center;

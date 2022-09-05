@@ -76,18 +76,6 @@
                     <a href="#"><input type="submit" value="What's News"></a>
                     <div class="News_area">
                         <!-- Firebaseからデータを取得するフィールド -->
-                        <div class="News_box">
-                            <p>2001.1.30</p>
-                            <a>
-                                <p>news story</p>
-                            </a>
-                        </div>
-                        <div class="News_box">
-                            <p>2001.1.30</p>
-                            <a>
-                                <p>news story</p>
-                            </a>
-                        </div>
                     </div>
                     <!-- Firebaseからデータを取得するフィールド -->
 
@@ -118,5 +106,17 @@
             <p>Hajime Kawanami's Homepage e-mail:h-kawanami(@)aist.go.jp</p>
         </div>
 
+        <script>
+            //ニュース
+            //要素の配下に更新していけるようにしたい。
+            for (let index = 0; index < 10; index++){
+                let whats_news = document.querySelector('.News_area');
+                whats_news.innerHTML = '<div class="News_box"><p>2001.1.30</p><a><p>news story</p></a></div>'
+            }
+            
+            //トピック
+            let topics = document.querySelector('.Topic_area');
+            topics.innerHTML = '<div class="topics_box"><p>2001.1.30</p><a><p>news story</p></a></div>'
+        </script>
     </body>
 </html>

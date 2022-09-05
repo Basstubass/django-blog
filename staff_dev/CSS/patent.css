@@ -1,13 +1,16 @@
-  #patent_main{
-    padding-top:80px;
-    padding-left:100px;
-    text-align:left;
-    font-size:20px;
-    line-height:20px;
-  }
-
-  .patent-list{
-    font-size:2px;
-    font-family:Arial;
-
-  }
+.patent_main h1{
+  margin-left: 7%;
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+.patent-list{
+  margin-left: 10%;
+  margin-top: 5%;
+  font-size: 18px;
+  width: 80%;
+}
+.patent-list li{
+  margin-top: 2%;
+  border-bottom: solid;
+  padding-bottom: 10px;
+}
